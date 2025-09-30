@@ -8,7 +8,7 @@
                     <%= listing.title %>
                 </b></h3>
         </div>
-        <div class="card col-6 offset-3 show-card listing-card">
+        <div class="card col-sm-6 offset-sm-3 show-card listing-card">
             <img src="<%- listing.image.url %>" class="card-img-top show-img" alt="listing_image">
             <div class="card-body">
                 <p class="card-text">
@@ -36,7 +36,7 @@
 
 
             <div class="btns">
-                <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">Edit</a>
+                <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-sm-1 offset-3 edit-btn">Edit</a>
 
 
                 <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
@@ -47,7 +47,7 @@
 
 
 
-                <div class="col-8 offset-3 mb-3">
+                <div class="col-sm-8 offset-sm-3 mb-3">
                     <hr />
                     <% if(currUser) { %>
                         <h4>Leave a Review</h4>
@@ -94,7 +94,7 @@
                                 <div class="row ">
                                     <p><b>All Reviews</b></p>
                                     <% for(review of listing.reviews) { %>
-                                        <div class="card col-5 ms-3 mb-3">
+                                        <div class="card col-sm-5 ms-sm-3 mb-3">
                                             <div class="card-body">
                                                 <h5 class="card-title">@<%= review.author.username %>
                                                 </h5>
